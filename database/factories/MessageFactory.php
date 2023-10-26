@@ -17,7 +17,10 @@ class MessageFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'room_id' => $this->faker->numberBetween(1, 10),
+            'user_id' => $this->faker->numberBetween(1, 3),
+            'body'    => $this->faker->sentence,
+            'is_seen' => $this->faker->boolean,
         ];
     }
 }

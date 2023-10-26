@@ -15,4 +15,10 @@ class Room extends Model
         return $this->hasMany(Message::class);
     }
 
+    public function users(): HasMany
+    { 
+        return $this->hasMany(User::class, 'id', 'user_one_id')
+            ->orWhere('id', $this->user_two_id);
+    }
+
 }

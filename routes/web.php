@@ -1,7 +1,6 @@
 <?php
 
 use App\Livewire\Chat;
-use App\Livewire\Chat\Index;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,4 +24,4 @@ Route::view('profile', 'profile')
     ->middleware(['auth'])
     ->name('profile');
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

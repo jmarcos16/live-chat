@@ -2,15 +2,26 @@
 
 namespace App\Livewire;
 
-use App\Models\User;
 use Livewire\Component;
 
 class Chat extends Component
 {
     public function render()
     {
+        dd(
+            auth()
+                ->user()
+                ->rooms()
+                ->with('users')
+                ->get()
+        );
         return view('livewire.chat', [
-            'users' => User::query()->whereNot('id', auth()->user()->id)->get()
+            /** @var User $auth */
+            'users' => auth()
+                ->user()
+                ->rooms()
+                ->with('users')
+                ->get(),
         ]);
     }
 }

@@ -7,8 +7,8 @@ use Livewire\Component;
 
 class Room extends Component
 {
-
     public $room;
+
     public $messages;
 
     #[On('open::room')]
@@ -17,7 +17,6 @@ class Room extends Component
         $this->room     = $room;
         $this->messages = $room->messages;
     }
-
 
     public function render()
     {
