@@ -1,6 +1,6 @@
 <div class="py-10 mx-auto max-w-7xl sm:px-6 lg:px-8">
-    <div class="grid h-full grid-cols-4 gap-4 overflow-y-auto bg-white rounded-lg shadow">
-        <div class="col-span-1 overflow-y-auto border-r max-h-2xl">
+    <div class="absolute grid grid-cols-4 gap-4 overflow-hidden bg-white rounded-lg shadow h-4/5">
+        <div class="relative col-span-1 overflow-y-auto border-r scroll-auto max-h-2xl">
             <h5 class="p-4 font-medium">Mensagens</h5>
             <ul class="divide-y">
                 @foreach ($users as $user)
@@ -12,9 +12,7 @@
             </ul>
         </div>
         <div class="col-span-3">
-            <div class="flex flex-col items-center justify-center h-full">
-                <p class="mt-4 text-gray-700">Selecione uma conversa para começar</p>
-            </div>
+            <livewire:chat.show />
         </div>
     </div>
 </div>
