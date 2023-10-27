@@ -11,7 +11,10 @@ try {
     //throw $th;
 }
 
-Route::get('/', Chat::class)->name('chat.index');
+
+Route::view('/', 'welcome');
+
+// Route::get('/', Chat::class)->name('chat.index');
 
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
